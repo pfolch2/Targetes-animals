@@ -141,43 +141,296 @@
   <script>
     // Pots canviar els animals, les imatges i les síl·labes en aquesta llista.
     const animals = [
-      {
-        nom: "ZEBRA",
-        sillabes: ["ZE", "BRA"],
-        imatge: "https://upload.wikimedia.org/wikipedia/commons/f/f2/Beautiful_Zebra_in_South_Africa.JPG?utm_source=es.wikipedia.org&utm_campaign=index&utm_content=original",
-        alt: "Una zebra"
-      },
-      {
-        nom: "GIRAFA",
-        sillabes: ["GI", "RA", "FA"],
-        imatge: "https://es.wikipedia.org/wiki/Giraffa_reticulata",
-        alt: "Una girafa"
-      },
-      {
-        nom: "CO-NILL",
-        sillabes: ["CO", "NILL"],
-        imatge: "https://images.unsplash.com/photo-1585110396000-c9ffd4e4b308?auto=format&fit=crop&w=700&q=80",
-        alt: "Un conill"
-      },
-      {
-        nom: "TOR-TU-GA",
-        sillabes: ["TOR", "TU", "GA"],
-        imatge: "https://images.unsplash.com/photo-1437622368342-7a3d73a34c8f?auto=format&fit=crop&w=700&q=80",
-        alt: "Una tortuga"
-      },
-      {
-        nom: "LLE-Ó",
-        sillabes: ["LLE", "Ó"],
-        imatge: "https://images.unsplash.com/photo-1546182990-dffeafbe841d?auto=format&fit=crop&w=700&q=80",
-        alt: "Un lleó"
-      },
-      {
-        nom: "MI-CO",
-        sillabes: ["MI", "CO"],
-        imatge: "https://images.unsplash.com/photo-1540573133985-87b6da6d54a9?auto=format&fit=crop&w=700&q=80",
-        alt: "Un mico"
-      }
-    ];
+      const animals = [
+  {
+    nom: "TOR-TU-GA",
+    sillabes: ["TOR", "TU", "GA"],
+    imatge: "https://images.unsplash.com/photo-1437622368342-7a3d73a34c8f?auto=format&fit=crop&w=700&q=80",
+    alt: "Una tortuga"
+  },
+  {
+    nom: "GI-RA-FA",
+    sillabes: ["GI", "RA", "FA"],
+    imatge: "https://images.unsplash.com/photo-1547721064-da6cfb341d50?auto=format&fit=crop&w=700&q=80",
+    alt: "Una girafa"
+  },
+  {
+    nom: "E-LE-FANT",
+    sillabes: ["E", "LE", "FANT"],
+    imatge: "https://images.unsplash.com/photo-1557050543-4d5f4e07ef46?auto=format&fit=crop&w=700&q=80",
+    alt: "Un elefant"
+  },
+  {
+    nom: "PA-PA-LLO-NA",
+    sillabes: ["PA", "PA", "LLO", "NA"],
+    imatge: "https://images.unsplash.com/photo-1444927714506-8492d94b5ba0?auto=format&fit=crop&w=700&q=80",
+    alt: "Una papallona"
+  },
+  {
+    nom: "CO-NILL",
+    sillabes: ["CO", "NILL"],
+    imatge: "https://images.unsplash.com/photo-1585110396000-c9ffd4e4b308?auto=format&fit=crop&w=700&q=80",
+    alt: "Un conill"
+  },
+  {
+    nom: "ES-QUI-ROL",
+    sillabes: ["ES", "QUI", "ROL"],
+    imatge: "https://images.unsplash.com/photo-1507666405895-422eee7d517f?auto=format&fit=crop&w=700&q=80",
+    alt: "Un esquirol"
+  },
+  {
+    nom: "DO-FÍ",
+    sillabes: ["DO", "FÍ"],
+    imatge: "https://images.unsplash.com/photo-1570481662006-a3a1374699e8?auto=format&fit=crop&w=700&q=80",
+    alt: "Un dofí"
+  },
+  {
+    nom: "CA-VALL",
+    sillabes: ["CA", "VALL"],
+    imatge: "https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?auto=format&fit=crop&w=700&q=80",
+    alt: "Un cavall"
+  },
+  {
+    nom: "LLE-Ó",
+    sillabes: ["LLE", "Ó"],
+    imatge: "https://images.unsplash.com/photo-1546182990-dffeafbe841d?auto=format&fit=crop&w=700&q=80",
+    alt: "Un lleó"
+  },
+  {
+    nom: "TI-GRE",
+    sillabes: ["TI", "GRE"],
+    imatge: "https://images.unsplash.com/photo-1561731216-c3a4d99437d5?auto=format&fit=crop&w=700&q=80",
+    alt: "Un tigre"
+  },
+  {
+    nom: "MI-CO",
+    sillabes: ["MI", "CO"],
+    imatge: "https://images.unsplash.com/photo-1540573133985-87b6da6d54a9?auto=format&fit=crop&w=700&q=80",
+    alt: "Un mico"
+  },
+  {
+    nom: "ZE-BRA",
+    sillabes: ["ZE", "BRA"],
+    imatge: "https://images.unsplash.com/photo-1501706362039-c6e13d6b4e87?auto=format&fit=crop&w=700&q=80",
+    alt: "Una zebra"
+  },
+  {
+    nom: "HI-E-NA",
+    sillabes: ["HI", "E", "NA"],
+    imatge: "https://images.unsplash.com/photo-1504173010664-32509aeebb62?auto=format&fit=crop&w=700&q=80",
+    alt: "Una hiena"
+  },
+  {
+    nom: "CA-MELL",
+    sillabes: ["CA", "MELL"],
+    imatge: "https://images.unsplash.com/photo-1512632578888-169bbbc64f33?auto=format&fit=crop&w=700&q=80",
+    alt: "Un camell"
+  },
+  {
+    nom: "HI-PO-PÒ-TAM",
+    sillabes: ["HI", "PO", "PÒ", "TAM"],
+    imatge: "https://images.unsplash.com/photo-1564760055775-d63b17a55c44?auto=format&fit=crop&w=700&q=80",
+    alt: "Un hipopòtam"
+  },
+  {
+    nom: "RI-NO-CE-RONT",
+    sillabes: ["RI", "NO", "CE", "RONT"],
+    imatge: "https://images.unsplash.com/photo-1504208434309-cb69f4fe52b0?auto=format&fit=crop&w=700&q=80",
+    alt: "Un rinoceront"
+  },
+  {
+    nom: "PAN-DA",
+    sillabes: ["PAN", "DA"],
+    imatge: "https://images.unsplash.com/photo-1564349683136-77e08dba1ef7?auto=format&fit=crop&w=700&q=80",
+    alt: "Un panda"
+  },
+  {
+    nom: "KO-A-LA",
+    sillabes: ["KO", "A", "LA"],
+    imatge: "https://images.unsplash.com/photo-1459262838948-3e2de6c1ec80?auto=format&fit=crop&w=700&q=80",
+    alt: "Un koala"
+  },
+  {
+    nom: "CAN-GUR",
+    sillabes: ["CAN", "GUR"],
+    imatge: "https://images.unsplash.com/photo-1526081347589-7fa3cb41b4b2?auto=format&fit=crop&w=700&q=80",
+    alt: "Un cangur"
+  },
+  {
+    nom: "PINGÜÍ",
+    sillabes: ["PIN", "GÜÍ"],
+    imatge: "https://images.unsplash.com/photo-1551986782-d0169b3f8fa7?auto=format&fit=crop&w=700&q=80",
+    alt: "Un pingüí"
+  },
+  {
+    nom: "PO-LLET",
+    sillabes: ["PO", "LLET"],
+    imatge: "https://images.unsplash.com/photo-1551986782-d0169b3f8fa7?auto=format&fit=crop&w=700&q=80",
+    alt: "Un pollet"
+  },
+  {
+    nom: "GA-LLI-NA",
+    sillabes: ["GA", "LLI", "NA"],
+    imatge: "https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?auto=format&fit=crop&w=700&q=80",
+    alt: "Una gallina"
+  },
+  {
+    nom: "PA-PA-GALL",
+    sillabes: ["PA", "PA", "GALL"],
+    imatge: "https://images.unsplash.com/photo-1552728089-57bdde30beb3?auto=format&fit=crop&w=700&q=80",
+    alt: "Un papagall"
+  },
+  {
+    nom: "FLA-MENC",
+    sillabes: ["FLA", "MENC"],
+    imatge: "https://images.unsplash.com/photo-1497206365907-f5e630693df0?auto=format&fit=crop&w=700&q=80",
+    alt: "Un flamenc"
+  },
+  {
+    nom: "CAR-GOL",
+    sillabes: ["CAR", "GOL"],
+    imatge: "https://images.unsplash.com/photo-1509150801366-9a5c7b1f7f6d?auto=format&fit=crop&w=700&q=80",
+    alt: "Un cargol"
+  },
+  {
+    nom: "A-RA-NYA",
+    sillabes: ["A", "RA", "NYA"],
+    imatge: "https://images.unsplash.com/photo-1564518098558-7f5a1e6c8c9c?auto=format&fit=crop&w=700&q=80",
+    alt: "Una aranya"
+  },
+  {
+    nom: "MA-RI-E-TA",
+    sillabes: ["MA", "RI", "E", "TA"],
+    imatge: "https://images.unsplash.com/photo-1503602642458-232111445657?auto=format&fit=crop&w=700&q=80",
+    alt: "Una marieta"
+  },
+  {
+    nom: "MOS-QUIT",
+    sillabes: ["MOS", "QUIT"],
+    imatge: "https://images.unsplash.com/photo-1546074177-ffdda98d214f?auto=format&fit=crop&w=700&q=80",
+    alt: "Un mosquit"
+  },
+  {
+    nom: "LLA-GOS-TA",
+    sillabes: ["LLA", "GOS", "TA"],
+    imatge: "https://images.unsplash.com/photo-1626808642875-0aa545482dfb?auto=format&fit=crop&w=700&q=80",
+    alt: "Una llagosta"
+  },
+  {
+    nom: "CA-RA-GOL",
+    sillabes: ["CA", "RA", "GOL"],
+    imatge: "https://images.unsplash.com/photo-1509150801366-9a5c7b1f7f6d?auto=format&fit=crop&w=700&q=80",
+    alt: "Un caragol"
+  },
+  {
+    nom: "SERP-ENT",
+    sillabes: ["SER", "PENT"],
+    imatge: "https://images.unsplash.com/photo-1531386151447-fd76ad50012f?auto=format&fit=crop&w=700&q=80",
+    alt: "Una serp"
+  },
+  {
+    nom: "CO-CO-DIL",
+    sillabes: ["CO", "CO", "DIL"],
+    imatge: "https://images.unsplash.com/photo-1568122506084-3d4b5d6a8b9e?auto=format&fit=crop&w=700&q=80",
+    alt: "Un cocodril"
+  },
+  {
+    nom: "LLAR-GAR-DAIX",
+    sillabes: ["LLAR", "GAR", "DAIX"],
+    imatge: "https://images.unsplash.com/photo-1526348020089-1e4e3e2d6f8c?auto=format&fit=crop&w=700&q=80",
+    alt: "Una sargantana"
+  },
+  {
+    nom: "SAR-GAN-TA-NA",
+    sillabes: ["SAR", "GAN", "TA", "NA"],
+    imatge: "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1e/Podarcis_muralis_near_Entella_river_006.jpg/330px-Podarcis_muralis_near_Entella_river_006.jpg?utm_source=ca.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+    alt: "Una sargantana"
+  },
+  {
+    nom: "SA-LA-MAN-DRA",
+    sillabes: ["SA", "LA", "MAN", "DRA"],
+    imatge: "https://images.unsplash.com/photo-1535591273668-578e31182c4f?auto=format&fit=crop&w=700&q=80",
+    alt: "Una salamandra"
+  },
+  {
+    nom: "GRA-NO-TA",
+    sillabes: ["GRA", "NO", "TA"],
+    imatge: "https://images.unsplash.com/photo-1535591273668-578e31182c4f?auto=format&fit=crop&w=700&q=80",
+    alt: "Una granota"
+  },
+  {
+    nom: "GRI-PAU",
+    sillabes: ["GRI", "PAU"],
+    imatge: "https://images.unsplash.com/photo-1518895949257-7621c3c786d7?auto=format&fit=crop&w=700&q=80",
+    alt: "Un gripau"
+  },
+  {
+    nom: "BA-LE-NA",
+    sillabes: ["BA", "LE", "NA"],
+    imatge: "https://images.unsplash.com/photo-1568430462989-44163eb1752f?auto=format&fit=crop&w=700&q=80",
+    alt: "Una balena"
+  },
+  {
+    nom: "TAU-RÓ",
+    sillabes: ["TAU", "RÓ"],
+    imatge: "https://images.unsplash.com/photo-1560275619-4662e36fa65c?auto=format&fit=crop&w=700&q=80",
+    alt: "Un tauró"
+  },
+  {
+    nom: "ME-DU-SA",
+    sillabes: ["ME", "DU", "SA"],
+    imatge: "https://images.unsplash.com/photo-1530053969600-caed2596d242?auto=format&fit=crop&w=700&q=80",
+    alt: "Una medusa"
+  },
+  {
+    nom: "ES-TRE-LLA DE MAR",
+    sillabes: ["ES", "TRE", "LLA", "DE", "MAR"],
+    imatge: "https://images.unsplash.com/photo-1546026423-cc4642628d2b?auto=format&fit=crop&w=700&q=80",
+    alt: "Una estrella de mar"
+  },
+  {
+    nom: "CA-VA-LLET DE MAR",
+    sillabes: ["CA", "VA", "LLET", "DE", "MAR"],
+    imatge: "https://images.unsplash.com/photo-1530053969600-caed2596d242?auto=format&fit=crop&w=700&q=80",
+    alt: "Un cavallet de mar"
+  },
+  {
+    nom: "LLA-GOS-TA",
+    sillabes: ["LLA", "GOS", "TA"],
+    imatge: "https://images.unsplash.com/photo-1559737558-2f5a35f4523b?auto=format&fit=crop&w=700&q=80",
+    alt: "Una llagosta marina"
+  },
+  {
+    nom: "GAR-O-TA",
+    sillabes: ["GA", "RO", "TA"],
+    imatge: "https://images.unsplash.com/photo-1545670723-196ed0954986?auto=format&fit=crop&w=700&q=80",
+    alt: "Un cranc"
+  },
+  {
+    nom: "ES-QUI-ROL",
+    sillabes: ["ES", "QUI", "ROL"],
+    imatge: "https://images.unsplash.com/photo-1507666405895-422eee7d517f?auto=format&fit=crop&w=700&q=80",
+    alt: "Un esquirol"
+  },
+  {
+    nom: "E-RI-ÇÓ",
+    sillabes: ["E", "RI", "ÇÓ"],
+    imatge: "https://images.unsplash.com/photo-1558236829-1f3d6f8a5f5d?auto=format&fit=crop&w=700&q=80",
+    alt: "Un eriçó"
+  },
+  {
+    nom: "MÚS-SOL",
+    sillabes: ["MÚS", "SOL"],
+    imatge: "https://images.unsplash.com/photo-1507666405895-422eee7d517f?auto=format&fit=crop&w=700&q=80",
+    alt: "Un mussol"
+  },
+  {
+    nom: "TEI-XÓ",
+    sillabes: ["TEI", "XÓ"],
+    imatge: "https://images.unsplash.com/photo-1518791841217-8f162f1e1131?auto=format&fit=crop&w=700&q=80",
+    alt: "Un teixó"
+  }
+];
 
     // Barreja les síl·labes sense modificar l'ordre correcte original.
     function barreja(llista) {
